@@ -1,0 +1,287 @@
+/* =========================================================
+   QUILA ACADEMY — Design Tokens
+   Inherits the "Creative Fortress" system from Quila Studios
+   so the academy subdomain reads as the same brand.
+   ========================================================= */
+
+:root {
+  /* ---- Color ---- */
+  --ink-navy: #16324F;      /* primary dark / text on light */
+  --twilight-blue: #2E6F9E; /* secondary blue, hover states */
+  --fortress-gold: #E0A526; /* accent — CTAs, highlights, promo */
+  --terracotta: #E8734A;    /* secondary accent — eyebrows, tags */
+  --warm-cream: #FBF3E7;    /* light surface / background */
+  --charcoal: #24211D;      /* body text on light surfaces */
+
+  /* tints/shades derived for panel work (comic-panel signature) */
+  --ink-navy-10: rgba(22, 50, 79, 0.1);
+  --ink-navy-20: rgba(22, 50, 79, 0.2);
+  --cream-90: rgba(251, 243, 231, 0.9);
+  --gold-15: rgba(224, 165, 38, 0.15);
+
+  /* ---- Type families ---- */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+
+  /* ---- Type scale ---- */
+  --fs-display-xl: clamp(2.6rem, 6vw, 5rem);
+  --fs-display-lg: clamp(2rem, 4.5vw, 3.4rem);
+  --fs-display-md: clamp(1.5rem, 3vw, 2.1rem);
+  --fs-body-lg: 1.15rem;
+  --fs-body: 1rem;
+  --fs-small: 0.9rem;
+  --fs-eyebrow: 0.8rem;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+  --space-8: 9rem;
+
+  /* ---- Misc ---- */
+  --radius-panel: 4px;
+  --nav-height: 76px;
+}
+
+/* =========================================================
+   Reset & base
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--warm-cream);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink-navy);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--fortress-gold);
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 0 0 var(--space-1);
+}
+
+.section-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* =========================================================
+   Nav
+   ========================================================= */
+
+#site-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-3);
+  background: var(--cream-90);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--ink-navy-10);
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.nav-logo strong {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-navy);
+}
+
+.nav-logo span {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--ink-navy);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+  padding: 10px 2px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  opacity: 1;
+}
+
+.nav-cta {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--warm-cream) !important;
+  background: var(--ink-navy);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-panel);
+  text-decoration: none !important;
+  opacity: 1 !important;
+  transition: background 0.2s ease;
+}
+
+.nav-cta:hover,
+.nav-cta:focus-visible {
+  background: var(--twilight-blue);
+}
+
+#nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink-navy);
+  margin: 0 auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+#nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  #nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    right: 0;
+    height: calc(100vh - var(--nav-height));
+    height: calc(100dvh - var(--nav-height));
+    width: min(75vw, 300px);
+    background: var(--warm-cream);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 24px rgba(22, 50, 79, 0.15);
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 1.05rem;
+    padding: 8px 0;
+  }
+
+  .nav-cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  #nav-toggle span,
+  .nav-links {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   Placeholder for sections built in later phases
+   ========================================================= */
+
+main {
+  min-height: 40vh;
+}
