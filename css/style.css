@@ -811,6 +811,97 @@ button {
 }
 
 /* =========================================================
+   Documentation — "Dokumentasi Kelas"
+   Illustrative gallery (SVG placeholders). Swap panel-doc SVGs
+   for real photos in assets/dokumentasi/ once uploaded.
+   ========================================================= */
+
+.documentation {
+  padding: var(--space-7) 0;
+  background: var(--ink-navy);
+  overflow: hidden;
+}
+
+.documentation .eyebrow {
+  color: var(--fortress-gold);
+}
+
+.documentation .section-heading {
+  margin-bottom: var(--space-4);
+}
+
+.documentation .section-heading h2 {
+  color: var(--warm-cream);
+}
+
+.doc-gallery {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--space-3);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.doc-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.doc-panel {
+  flex: 0 0 240px;
+  margin: 0;
+  background: var(--warm-cream);
+  border: 3px solid var(--fortress-gold);
+  box-shadow: 5px 5px 0 rgba(224, 165, 38, 0.25);
+  padding: var(--space-2);
+  scroll-snap-align: start;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.doc-panel:hover,
+.doc-panel:focus-within {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 7px 7px 0 rgba(224, 165, 38, 0.25);
+}
+
+.doc-panel svg {
+  width: 100%;
+  height: 220px;
+  stroke: var(--ink-navy);
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.doc-panel figcaption {
+  margin-top: var(--space-1);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--ink-navy);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc-panel {
+    transition: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .doc-panel {
+    flex-basis: 190px;
+  }
+
+  .doc-panel svg {
+    height: 170px;
+  }
+}
+
+/* =========================================================
    Placeholder for sections built in later phases
    ========================================================= */
 
