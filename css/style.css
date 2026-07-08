@@ -536,6 +536,149 @@ button {
 }
 
 /* =========================================================
+   Section heading (shared)
+   ========================================================= */
+
+.section-heading {
+  max-width: 38rem;
+  margin: 0 0 var(--space-5);
+}
+
+.section-heading h2 {
+  font-size: var(--fs-display-lg);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: var(--space-1);
+}
+
+.section-heading p {
+  font-size: var(--fs-body-lg);
+  margin-top: var(--space-2);
+  opacity: 0.85;
+}
+
+/* =========================================================
+   Comic-card component (signature element, reused across sections)
+   ========================================================= */
+
+.comic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.comic-card {
+  position: relative;
+  background: var(--warm-cream);
+  border: 3px solid var(--ink-navy);
+  box-shadow: 5px 5px 0 var(--ink-navy-20);
+  padding: var(--space-4) var(--space-3) var(--space-3);
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.comic-card:hover,
+.comic-card:focus-within {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 7px 7px 0 var(--ink-navy-20);
+}
+
+.comic-card-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: var(--space-2);
+  color: var(--terracotta);
+}
+
+.comic-card-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.comic-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-1);
+}
+
+.comic-card p {
+  font-size: var(--fs-body);
+  opacity: 0.85;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comic-card {
+    transition: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .comic-grid {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+  }
+
+  .comic-card {
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   Benefits — "Kenapa Kelas Ini Jadi Pilihan Tepat"
+   ========================================================= */
+
+.benefits {
+  padding: var(--space-7) 0;
+}
+
+/* =========================================================
+   Facilities — dark variant for section rhythm contrast
+   ========================================================= */
+
+.facilities {
+  background: var(--ink-navy);
+  padding: var(--space-7) 0;
+}
+
+.facilities .eyebrow {
+  color: var(--fortress-gold);
+}
+
+.facilities .section-heading h2 {
+  color: var(--warm-cream);
+}
+
+.facilities .comic-card {
+  background: transparent;
+  border-color: var(--fortress-gold);
+  box-shadow: 5px 5px 0 rgba(224, 165, 38, 0.22);
+}
+
+.facilities .comic-card:hover,
+.facilities .comic-card:focus-within {
+  box-shadow: 7px 7px 0 rgba(224, 165, 38, 0.22);
+}
+
+.facilities .comic-card-icon {
+  color: var(--fortress-gold);
+}
+
+.facilities .comic-card h3 {
+  color: var(--warm-cream);
+}
+
+.facilities .comic-card p {
+  color: var(--warm-cream);
+  opacity: 0.78;
+}
+
+/* =========================================================
    Placeholder for sections built in later phases
    ========================================================= */
 
