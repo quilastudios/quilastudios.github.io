@@ -14,8 +14,8 @@
 
   <nav id="site-nav">
     <a href="#hero" class="nav-logo">
-      <strong>QUILA</strong>
-      <span>Academy</span>
+      <img src="assets/logo/quila_academy_logo.png" alt="Quila Academy" class="nav-logo-img">
+      <strong>QUILA ACADEMY</strong>
     </a>
     <button id="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
       <span></span>
@@ -34,42 +34,64 @@
   <main>
 
     <section id="hero" class="hero">
+      <video class="hero-bg-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="assets/video/hero_video_fixed.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
       <div class="section-inner hero-inner">
-        <div class="hero-content">
-          <p class="eyebrow">Open Offline Class</p>
-          <h1 class="hero-title">Bebaskan Imajinasi<br><em>di Atas Kertas</em></h1>
-          <p class="hero-lead">Kelas komik &amp; gambar tatap muka untuk pemula. Belajar dari dasar bareng mentor profesional, di ruang yang nyaman dan suportif — bukan sekadar kelas, tapi tempat imajinasi jadi karya.</p>
-          <div class="hero-price">
-            <span class="price-old">Rp550.000</span>
-            <span class="price-new">Rp200.000</span>
-            <span class="price-unit">/ bulan &middot; 4&times; pertemuan</span>
-          </div>
-          <div class="hero-actions">
-            <a href="https://wa.me/6285113296389?text=Halo%20Quila%20Academy%2C%20saya%20mau%20daftar%20Comic%2FDraw%20Course" class="cta-button" target="_blank" rel="noopener">Daftar Sekarang</a>
-            <a href="#kelas" class="cta-link">Lihat detail kelas ↓</a>
-          </div>
-        </div>
+        <div class="hero-bottom-content">
+          <div class="hero-title-cluster">
+            <p class="eyebrow">Open Offline Class</p>
+            <p class="hero-course-tag">Comic <span class="tag-slash">/</span> Draw Course</p>
+            <h1 class="hero-title">Bebaskan Imajinasi<br><em>di Atas Kertas</em></h1>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="panel panel-a">
-            <svg class="panel-doodle" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 90 Q30 40 60 35 Q90 30 95 60" />
-              <circle cx="60" cy="35" r="4" />
-              <path d="M25 95 L95 95" stroke-dasharray="1 8" />
-              <path d="M55 20 L60 8 L65 20" />
-            </svg>
+            <div class="hero-price-ticket">
+              <span class="ticket-discount-badge">Hemat 64%</span>
+              <div class="ticket-price-block">
+                <span class="price-old">Rp550.000</span>
+                <span class="price-new">Rp200.000</span>
+              </div>
+              <span class="ticket-divider" aria-hidden="true"></span>
+              <span class="price-unit">/ bulan &middot; 4&times; pertemuan</span>
+            </div>
           </div>
-          <div class="panel panel-b">
-            <span class="sfx">GORES!</span>
-          </div>
-          <div class="panel panel-c">
-            <svg class="panel-bubble" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 10 h100 a10 10 0 0 1 10 10 v40 a10 10 0 0 1 -10 10 h-55 l-15 15 v-15 h-30 a10 10 0 0 1 -10 -10 v-40 a10 10 0 0 1 10 -10 z" class="panel-bubble" />
-              <path class="panel-bubble-mark" d="M30 45 h50" />
-              <path class="panel-bubble-mark" d="M30 58 h30" />
-            </svg>
-          </div>
+
+          <a href="https://wa.me/6285113296389?text=Halo%20Quila%20Academy%2C%20saya%20mau%20daftar%20Comic%2FDraw%20Course" class="cta-button hero-cta-floating" target="_blank" rel="noopener">Daftar Sekarang</a>
         </div>
+      </div>
+    </section>
+
+    <!-- Taruh file foto di assets/dokumentasi/ dengan nama berikut:
+         sesi-mentoring.jpg, sketsa-bersama.jpg, hasil-karya-siswa.jpg, diskusi-kreatif.jpg
+         (atau ganti nama file di src= di bawah sesuai nama filemu) -->
+    <section id="dokumentasi" class="documentation">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Dokumentasi Kelas</p>
+          <h2>Suasana belajar, dari sketsa pertama sampai panel terakhir</h2>
+        </div>
+      </div>
+
+      <div class="doc-gallery">
+        <figure class="doc-panel" style="--tilt: -1.5deg;">
+          <img src="assets/dokumentasi/sesi-mentoring.png" alt="Sesi mentoring bersama siswa Quila Academy" loading="lazy">
+          <figcaption>Sesi Mentoring</figcaption>
+        </figure>
+
+        <figure class="doc-panel" style="--tilt: 1.2deg;">
+          <img src="assets/dokumentasi/sketsa-bersama.png" alt="Sketsa bersama di kelas Quila Academy" loading="lazy">
+          <figcaption>Sketsa Bersama</figcaption>
+        </figure>
+
+        <figure class="doc-panel" style="--tilt: -1deg;">
+          <img src="assets/dokumentasi/hasil-karya-siswa.png" alt="Hasil karya komik siswa Quila Academy" loading="lazy">
+          <figcaption>Hasil Karya Siswa</figcaption>
+        </figure>
+
+        <figure class="doc-panel" style="--tilt: 1.6deg;">
+          <img src="assets/dokumentasi/diskusi-kreatif.png" alt="Diskusi kreatif antar siswa Quila Academy" loading="lazy">
+          <figcaption>Diskusi Kreatif</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -81,40 +103,15 @@
         </div>
         <div class="comic-grid">
           <article class="comic-card" style="--tilt: -1.2deg;">
-            <div class="comic-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 20 C12 14 9 11 4 10" />
-                <path d="M12 20 C12 13 15 9 21 7" />
-                <path d="M12 20 V6" />
-              </svg>
-            </div>
-            <h3>Kurikulum Ramah Pemula</h3>
-            <p>Mulai dari nol tetap bisa ikut. Materi disusun bertahap, jadi nggak perlu minder di pertemuan pertama.</p>
+            <img class="comic-card-mascot" src="assets/dokumentasi/mascot_signboard.png" alt="Maskot rubah Quila Academy memegang papan tulisan: Kurikulum Ramah Pemula. Mulai dari nol tetap bisa ikut, materi disusun bertahap." loading="lazy">
           </article>
 
           <article class="comic-card" style="--tilt: 0.9deg;">
-            <div class="comic-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="9" cy="10" r="4" />
-                <circle cx="16" cy="12" r="3.3" />
-                <path d="M4 20 C4 16 6.5 14 9 14 C11.5 14 13 15.5 13.5 17.5" />
-                <path d="M13.5 20 C13.5 17.5 14.8 16 16 16 C18 16 19.5 17.7 20 20" />
-              </svg>
-            </div>
-            <h3>Lingkungan Suportif</h3>
-            <p>Belajar bareng komunitas yang saling dukung, bukan saling bandingkan hasil karya.</p>
+            <img class="comic-card-mascot comic-card-mascot--zoom" src="assets/dokumentasi/boy_mascot_signboard.png" alt="Karakter anak laki-laki Quila Academy memegang papan tulisan: Lingkungan Suportif. Belajar bareng komunitas yang saling dukung." loading="lazy">
           </article>
 
           <article class="comic-card" style="--tilt: -0.6deg;">
-            <div class="comic-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 3 C7 3 4 7 4 11 C4 14 6 16 7.5 17.5 V20 H16.5 V17.5 C18 16 20 14 20 11 C20 7 17 3 12 3 Z" />
-                <path d="M9.5 20 H14.5" />
-                <path d="M10.5 22 H13.5" />
-              </svg>
-            </div>
-            <h3>Terapi Kreatif</h3>
-            <p>Menggambar jadi cara melepas penat sekaligus melatih fokus dan konsentrasi.</p>
+            <img class="comic-card-mascot comic-card-mascot--zoom" src="assets/dokumentasi/girl_mascot_signboard.png" alt="Karakter anak perempuan Quila Academy memegang papan tulisan: Terapi Kreatif. Menggambar jadi cara melepas penat dan melatih fokus." loading="lazy">
           </article>
         </div>
       </div>
@@ -209,76 +206,60 @@
       </div>
     </section>
 
-    <!-- TODO: begitu foto asli tersedia, ganti isi tiap <figure class="doc-panel"> ini
-         dengan <img src="assets/dokumentasi/xxx.jpg" alt="..."> menggantikan SVG ilustrasi -->
-    <section id="dokumentasi" class="documentation">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="eyebrow">Dokumentasi Kelas</p>
-          <h2>Suasana belajar, dari sketsa pertama sampai panel terakhir</h2>
+    <!-- Tahap 6: Lokasi, Kontak & Footer -->
+    <section id="lokasi" class="location">
+      <div class="section-inner location-grid">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Lokasi</p>
+            <h2>Datang langsung ke studio kami</h2>
+          </div>
+          <p class="location-address">
+            Jl. Raya Soekarno Hatta No. 62<br>
+            Menganti, Kesugihan, Cilacap
+          </p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Raya+Soekarno+Hatta+No+62+Menganti+Kesugihan+Cilacap" target="_blank" rel="noopener" class="cta-button">Buka di Google Maps</a>
         </div>
-      </div>
 
-      <div class="doc-gallery">
-        <figure class="doc-panel" style="--tilt: -1.5deg;">
-          <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
-            <rect x="20" y="15" width="90" height="55" rx="3" />
-            <path d="M35 30 L70 30" />
-            <path d="M35 45 L60 45" />
-            <circle cx="125" cy="40" r="8" />
-            <path d="M125 48 L125 75" />
-            <path d="M125 55 L110 45" />
-            <path d="M125 55 L140 65" />
-            <path d="M125 75 L115 95" />
-            <path d="M125 75 L135 95" />
-            <circle cx="30" cy="150" r="6" /><path d="M30 156 L30 175" />
-            <circle cx="58" cy="155" r="6" /><path d="M58 161 L58 180" />
-            <circle cx="86" cy="150" r="6" /><path d="M86 156 L86 175" />
-          </svg>
-          <figcaption>Sesi Mentoring</figcaption>
-        </figure>
-
-        <figure class="doc-panel" style="--tilt: 1.2deg;">
-          <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
-            <rect x="20" y="60" width="120" height="90" rx="4" />
-            <path d="M40 92 Q70 72 100 96 Q120 110 130 92" />
-            <path d="M95 70 L125 40" stroke-width="4" />
-            <path d="M120 35 L131 44 L124 51 L114 41 Z" />
-            <path d="M85 78 Q90 65 100 68 Q110 71 105 80 Z" />
-          </svg>
-          <figcaption>Sketsa Bersama</figcaption>
-        </figure>
-
-        <figure class="doc-panel" style="--tilt: -1deg;">
-          <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="15" width="130" height="170" rx="2" />
-            <line x1="15" y1="80" x2="145" y2="80" />
-            <line x1="15" y1="140" x2="145" y2="140" />
-            <line x1="80" y1="15" x2="80" y2="80" />
-            <path d="M35 50 L50 30 L65 50" />
-            <circle cx="105" cy="45" r="10" />
-            <path d="M30 105 Q60 95 90 110 Q120 120 135 100" />
-            <path d="M40 160 L60 160" /><path d="M75 160 L110 160" />
-          </svg>
-          <figcaption>Hasil Karya Siswa</figcaption>
-        </figure>
-
-        <figure class="doc-panel" style="--tilt: 1.6deg;">
-          <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 40 h70 a8 8 0 0 1 8 8 v35 a8 8 0 0 1 -8 8 h-40 l-12 12 v-12 h-18 a8 8 0 0 1 -8 -8 v-35 a8 8 0 0 1 8 -8 z" />
-            <path d="M60 110 h75 a8 8 0 0 1 8 8 v35 a8 8 0 0 1 -8 8 h-18 v12 l-12 -12 h-45 a8 8 0 0 1 -8 -8 v-35 a8 8 0 0 1 8 -8 z" />
-            <path d="M35 60 h40" stroke-width="2" />
-            <path d="M35 72 h25" stroke-width="2" />
-            <path d="M80 135 h45" stroke-width="2" />
-            <path d="M80 147 h30" stroke-width="2" />
-          </svg>
-          <figcaption>Diskusi Kreatif</figcaption>
-        </figure>
+        <div class="location-map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Jl.+Raya+Soekarno+Hatta+No+62+Menganti+Kesugihan+Cilacap&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            title="Lokasi Quila Academy">
+          </iframe>
+        </div>
       </div>
     </section>
 
-    <!-- Tahap 6: Lokasi, Kontak & Footer -->
   </main>
+
+  <footer class="site-footer">
+    <div class="section-inner footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo/quila_academy_logo.png" alt="Quila Academy" class="footer-logo-img">
+        <p>Comic &amp; Draw Course untuk pemula. Bebaskan imajinasi di atas kertas.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Kontak</h3>
+        <a href="https://wa.me/6285113296389" target="_blank" rel="noopener">0851-1329-6389</a>
+        <a href="mailto:quilastudiosina@gmail.com">quilastudiosina@gmail.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Sosial Media</h3>
+        <a href="https://instagram.com/quilastudios.official" target="_blank" rel="noopener">Instagram &mdash; @quilastudios.official</a>
+        <a href="https://instagram.com/quila.academy" target="_blank" rel="noopener">Instagram &mdash; @quila.academy</a>
+        <a href="https://www.tiktok.com/@quila.academy" target="_blank" rel="noopener">TikTok &mdash; @quila.academy</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Quila Studios &amp; Academy. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 
