@@ -840,16 +840,19 @@ button {
   color: var(--terracotta);
 }
 
+.comic-card-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
 .comic-card-mascot {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius-panel);
-}
-
-.comic-card-mascot--zoom {
-  transform: scale(1.15);
-  transform-origin: center 60%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
 }
 
 .comic-card-icon svg {
@@ -910,7 +913,7 @@ button {
 
 .benefits .comic-card {
   text-align: center;
-  padding: var(--space-3);
+  padding: 0;
   overflow: hidden;
   background: transparent;
   border-color: var(--fortress-gold);
@@ -1092,12 +1095,54 @@ button {
    ========================================================= */
 
 .documentation {
+  position: relative;
   padding: var(--space-7) 0;
   background: var(--warm-cream);
   overflow: hidden;
 }
 
+.documentation-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1400px;
+  height: 760px;
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.documentation-bg img {
+  position: absolute;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 2px solid var(--ink-navy);
+  box-shadow: 4px 4px 0 var(--ink-navy-20);
+  opacity: 0.9;
+  filter: grayscale(0.55) contrast(0.85) brightness(1.25);
+}
+
+.documentation-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--warm-cream);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.documentation .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.documentation .doc-gallery {
+  position: relative;
+  z-index: 1;
+}
+
 .documentation .section-heading {
+  position: relative;
   margin-bottom: var(--space-4);
 }
 
